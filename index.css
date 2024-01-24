@@ -49,6 +49,7 @@ h1 span{
     font-family: 'Dela Gothic One', sans-serif;
     color: var(--warning);
     font-size: 5rem;
+    text-stroke: 0.15rem black;
     -webkit-text-stroke: 0.15rem black;
     font-weight: 900;
 }
