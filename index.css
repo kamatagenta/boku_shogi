@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap');
 
+
 :root{
     --warning: #ffc107;
     --success: #198754;
@@ -9,11 +10,16 @@
     --font-scale: scale(0.8,1.3);
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body{
     font-family: 'BIZ UDPGothic', sans-serif;
     background-color: var(--body);
-    font-size: 16px;
+    font-size: 1.6rem;
     height: 100%;
+    
 }
 
 nav{
@@ -38,8 +44,8 @@ h1 span{
     transform: var(--font-scale) translate(-12%,3%);
     font-family: 'Dela Gothic One', sans-serif;
     color: var(--warning);
-    font-size: 50px;
-    -webkit-text-stroke: 1.5px black;
+    font-size: 5rem;
+    -webkit-text-stroke: 0.15rem black;
     font-weight: 900;
 }
 
@@ -48,10 +54,10 @@ nav ul{
 }
 
 nav li{
-    border-radius: 2.5px;
+    border-radius: 0.25rem;
     background-color: var(--warning);
-    margin: 0 5px;
-    padding: 5px;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
 }
 
 nav li a{
@@ -59,7 +65,7 @@ nav li a{
     display: inline-block;
     transform: var(--font-scale);
     color: black;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .wrapper{
@@ -74,20 +80,20 @@ article{
 }
 
 article h2{
-    font-size: 23px;
+    font-size: 2.3rem;
     background-color: #FFD699;
-    padding: 20px 0;
+    padding: 2rem 0;
 }
 
 article h2 span{
-    border-left: 4px solid #000;
-    padding: 6px 21px;
+    border-left: 0.4rem solid #000;
+    padding: 0.6rem 2.1rem;
 }
 
 article section{
     background-color: white;
-    padding: 30px;
-    margin: 15px 0;
+    padding: 3rem;
+    margin: 1.5rem 0;
 }
 
 .hover{
@@ -114,7 +120,7 @@ article section{
 }
 
 .hover .caption{
-    font-size: 25px;
+    font-size: 2.5rem;
     color: white;
 }
 
@@ -150,11 +156,59 @@ aside section{
 }
 
 footer{
-    padding: 30px;
+    padding: 3rem;
     background-color: var(--secondary);
     color: white;
 }
 
 footer a{
-    font-size: 14px;
+    display: block;
+    font-size: 1.4rem;
+    padding-top: 1rem;
+}
+
+@media screen and (width<=1000px){
+    .wrapper{
+        margin: 30px 0 20px;
+        width: 100vw;
+    }
+
+    nav li{
+        padding: 5px 1px;
+
+    }
+
+    nav li a{
+        font-size: 2.2rem;
+    }
+
+}
+
+@media  screen and (width<=667px) {
+    html{
+        font-size: 50%;
+    }
+    .wrapper{
+        justify-content: center;
+    }
+    article{
+        width: 90%;
+    }
+    aside{
+        display: none;
+    }
+    nav{
+        height: 60px;
+    }
+    nav li{
+        display: none;
+    }
+    h1 img{
+        height: 55px;
+        width: 50px;
+    }
+    h1 span{
+        font-size: 4.5rem;
+    }
+
 }
